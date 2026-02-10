@@ -1,4 +1,4 @@
-import { getMindmapList } from '../../shared/mindmaps.js';
+import { getMindmapList } from '../../shared/mindmaps';
 
 export async function handler() {
   return {

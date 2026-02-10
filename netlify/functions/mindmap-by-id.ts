@@ -1,4 +1,4 @@
-import { getMindmapById } from '../../shared/mindmaps.js';
+import { getMindmapById } from '../../shared/mindmaps';
 
 interface NetlifyEvent {
   queryStringParameters?: Record<string, string | undefined>;
