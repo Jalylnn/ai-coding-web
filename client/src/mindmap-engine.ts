@@ -19,7 +19,6 @@ const CFG = {
     fontSize: 13,
     fontSizeRoot: 16,
     descFontSize: 11,
-    iconOffset: 24,
 } as const;
 
 // ============ Layout types ============
@@ -137,20 +136,7 @@ function renderNodes(g: SVGGElement, ln: LayoutNode, onToggle: (id: string) => v
     });
     group.appendChild(rect);
 
-    // Icon
-    const hasIcon = ln.node.icon;
-    const textStartX = ln.x + 16 + (hasIcon ? CFG.iconOffset : 0);
-
-    if (hasIcon) {
-        const iconText = svgEl('text', {
-            x: ln.x + 16,
-            y: ln.y + (ln.node.description ? ln.h / 2 - 4 : ln.h / 2),
-            'dominant-baseline': 'central',
-            class: 'mm-node-icon',
-        });
-        iconText.textContent = ln.node.icon!;
-        group.appendChild(iconText);
-    }
+    const textStartX = ln.x + 16;
 
     // Label
     const label = svgEl('text', {

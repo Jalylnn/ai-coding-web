@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev": "npx netlify dev",
+    "dev:legacy": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "cd server && npm run dev",
     "dev:client": "cd client && npm run dev",
     "build": "cd client && npm run build",
     "start": "cd server && npm start",
+    "preview": "cd client && npm run preview",
     "install:all": "npm install && cd shared && npm install && cd ../server && npm install && cd ../client && npm install"
   },
   "devDependencies": {

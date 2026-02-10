@@ -3,7 +3,6 @@ export interface MindmapNode {
   id: string;
   label: string;
   description?: string;
-  icon?: string;
   children?: MindmapNode[];
   color?: string;
 }
@@ -13,7 +12,6 @@ export interface MindmapData {
   id: string;
   title: string;
   subtitle: string;
-  icon: string;
   root: MindmapNode;
 }
 
@@ -22,5 +20,4 @@ export interface MindmapSummary {
   id: string;
   title: string;
   subtitle: string;
-  icon: string;
 }

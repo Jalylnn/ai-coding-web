@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "client/dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/mindmaps"
+  to = "/.netlify/functions/mindmaps-list"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/mindmaps/:id"
+  to = "/.netlify/functions/mindmap-by-id?id=:id"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
